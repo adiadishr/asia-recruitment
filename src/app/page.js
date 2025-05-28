@@ -8,7 +8,7 @@ export default function Page() {
   return (<>
     {/* Hero */}
     <div className="p-1">
-      <div className="relative flex flex-col justify-center w-full h-[calc(85dvh-rem)] p-4 md:h-[calc(100dvh-8px)] px-8 overflow-hidden text-white rounded-xl">
+      <div className="relative flex flex-col justify-center w-full h-[90dvh] p-4 md:h-[calc(100dvh-8px)] px-8 overflow-hidden text-white rounded-xl">
         <Image data-aos='zoom-in' className="object-cover -z-10 scale-x-[1] md:object-[0%_0%]" src="/pexels.jpg" fill alt="Background" />
         <div className="absolute right-0 top-1/2 text-xs rotate-90">Scroll down to see more</div>
         <div data-aos='zoom-in' className="absolute inset-0 w-full h-full bg-black/50 -z-10"></div>
