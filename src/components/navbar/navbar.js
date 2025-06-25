@@ -5,13 +5,16 @@ import Image from 'next/image'
 import { LucideHome, Box, CircleUserRound, PhoneCall, CircleHelp, Newspaper } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { navItems } from '@/constants/nav'
 
-export default function Nav() {
+export default function Navbar() {
     const [scrolled, setScrolled] = useState(false)
+    const pathname = usePathname()
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > window.innerHeight * 0.5)
+            setScrolled(window.scrollY > window.innerHeight * 0.25)
         }
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
@@ -21,7 +24,9 @@ export default function Nav() {
         <div
             className={cn(
                 "fixed z-50 w-full duration-300",
-                scrolled ? '!bg-white/95 border-neutral-200 border-b backdrop-blur top-0 px-[5%]' : 'bg-transparent text-white top-2 px-[2.5%]'
+                pathname === "/"
+                    ? scrolled ? '!bg-white/95 backdrop-blur text-black top-0 px-[5%]' : 'bg-transparent text-white top-6 px-[2.5%]'
+                    : scrolled ? '!bg-white/95 backdrop-blur text-black top-0 px-[5%]' : 'bg-transparent text-white top-2 px-[2.5%]'
             )}
         >
             <div className={cn("h-[72px] flex justify-between items-center duration-300", !scrolled && "border-white/20 border-b px-[2.5%]")}>
@@ -41,26 +46,17 @@ export default function Nav() {
                 {/* Links */}
                 <div className="flex items-center gap-8 justify-right">
                     <div className="items-center hidden gap-8 md:flex">
-                        <Link href="/" className="flex items-center gap-2 hover:text-orange-400 duration-200">
-                            <LucideHome size={16} />
-                            Home
-                        </Link>
-                        <Link href="/about" className="flex items-center gap-2 hover:text-orange-400 duration-200">
-                            <CircleUserRound size={18} />
-                            About Us
-                        </Link>
-                        <Link href="/services" className="flex items-center gap-2 hover:text-orange-400 duration-200">
-                            <Box size={18} />
-                            Services
-                        </Link>
-                        <Link href="/faq" className="flex items-center gap-2 hover:text-orange-400 duration-200">
-                            <CircleHelp size={18} />
-                            FAQs
-                        </Link>
-                        <Link href="/blogs" className="flex items-center gap-2 hover:text-orange-400 duration-200">
-                            <Newspaper size={18} />
-                            Blogs
-                        </Link>
+                        {navItems.map((navItem, index) => (
+                            <Link key={index} href={`${navItem.href}`} className={cn("flex group items-center gap-2",
+                                pathname === navItem.href ?
+                                    scrolled ? "gradient-text" : "hover:underline underline" :
+                                    scrolled ? "text-black hover:text-orange-400 duration-150" : "text-white hover:underline")}>
+                                <navItem.icon className={cn(pathname === navItem.href ?
+                                    scrolled ? "text-orange-400" : "text-white hover:underline" :
+                                    scrolled ? "text-black group-hover:text-orange-400 duration-150" : "text-white hover:underline",)} size={16} />
+                                {navItem.title}
+                            </Link>
+                        ))}
                     </div>
                     <div className={cn(
                         "flex items-center gap-2 px-2 py-1 duration-300 border rounded-md cursor-pointer",

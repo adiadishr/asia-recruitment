@@ -1,9 +1,9 @@
-import Nav from "@/components/navigation";
 import "./globals.css";
 import UseAOS from "@/components/utilities/aos";
 import { UseLenis } from "@/components/utilities/lenis";
 import { sans } from "@/lib/fonts";
 import Footer from "@/components/sections/footer";
+import Navbar from "@/components/navbar/navbar";
 
 export const metadata = {
   title: "Create Next App",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${sans.variable} font-sans antialiased`}
       >
-        <Nav />
+        <Navbar />
         <UseAOS />
         <UseLenis />
         {children}

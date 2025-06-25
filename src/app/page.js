@@ -1,3 +1,4 @@
+import { TextReveal } from "@/components/magicui/text-reveal";
 import FAQ from "@/components/sections/faqs";
 import { Steps } from "@/components/sections/steps";
 import { ArrowDown } from "lucide-react";
@@ -7,8 +8,8 @@ import Link from "next/link";
 export default function Page() {
   return (<>
     {/* Hero */}
-    <div className="p-1">
-      <div className="relative flex flex-col justify-center w-full h-[80dvh] md:h-[calc(100dvh-8px)] px-[5%] overflow-hidden text-white rounded-xl">
+    <div className="p-4">
+      <div className="relative flex flex-col justify-center w-full h-[80dvh] md:h-[calc(100dvh-32px)] px-[5%] overflow-hidden text-white rounded-xl">
         <Image data-aos='zoom-in' className="object-cover -z-10 scale-x-[1] md:object-[0%_0%]" src="/pexels.jpg" fill alt="Background" />
         <div className="absolute -right-8 md:right-0 top-1/2 text-xs rotate-90">Scroll down to see more</div>
         <div data-aos='zoom-in' className="absolute inset-0 w-full h-full bg-black/50 -z-10"></div>
@@ -103,26 +104,24 @@ export default function Page() {
         </div>
       </div>
     </div>
+    {/* Marketing Text */}
+    <TextReveal>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta harum recusandae enim vitae sunt aspernatur esse qui nemo! Corrupti vitae at laboriosam maxime quasi delectus molestiae voluptatem dignissimos! Rerum.
+    </TextReveal>
     {/* Blogs */}
     <div className="pb-20 w-[90%] mx-auto">
       <div className="mb-8 text-3xl tracking-tight">Featured Articles</div>
       <div className="grid gap-8 md:grid-cols-2">
-        <Link href="/#" className="flex flex-col gap-6 group">
-          <div className="relative w-full overflow-hidden rounded-md h-90">
-            <Image fill src="/hero-4.jpg" alt="blog" className="object-cover duration-500 group-hover:scale-105" />
-          </div>
-          <div className="py-1.5 px-3 bg-orange-600/50 text-xs text-white w-max rounded-md">Dummy Blog</div>
-          <div className="-mb-4 text-2xl gradient-text">Dummy Blog Technique</div>
-          <div className="line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est ex soluta dolorem, voluptas quam, minima culpa aliquam laudantium consectetur quidem quasi minus veniam beatae illum! Et deserunt ex in! </div>
-        </Link>
-        <Link href="/#" className="flex flex-col gap-6 group">
-          <div className="relative w-full overflow-hidden rounded-md h-90">
-            <Image fill src="/hero-5.jpg" alt="blog" className="object-cover duration-500 group-hover:scale-105" />
-          </div>
-          <div className="py-1.5 px-3 bg-orange-600/50 text-xs text-white w-max rounded-md">Dummy Blog</div>
-          <div className="-mb-4 text-2xl gradient-text">Dummy Blog Technique</div>
-          <div className="line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est ex soluta dolorem, voluptas quam, minima culpa aliquam laudantium consectetur quidem quasi minus veniam beatae illum! Et deserunt ex in!</div>
-        </Link>
+        {Array.from({ length: 2 }).map((_, i) => (
+          <Link key={i} href="/blogs/dummy-blog" className="flex flex-col gap-6 group">
+            <div className="relative w-full overflow-hidden rounded-md h-90">
+              <Image fill src="/hero-4.jpg" alt="blog" className="object-cover duration-500 group-hover:scale-105" />
+            </div>
+            <div className="py-1.5 px-3 bg-orange-600/50 text-xs text-white w-max rounded-md">Dummy Blog</div>
+            <div className="-mb-4 text-2xl gradient-text">Dummy Blog Technique</div>
+            <div className="line-clamp-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est ex soluta dolorem, voluptas quam, minima culpa aliquam laudantium consectetur quidem quasi minus veniam beatae illum! Et deserunt ex in! </div>
+          </Link>
+        ))}
       </div>
     </div>
     {/* Steps */}
