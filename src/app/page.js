@@ -1,3 +1,4 @@
+import RoundedSubheading from "@/components/atomic/rounded-subheading";
 import { TextReveal } from "@/components/magicui/text-reveal";
 import FAQ from "@/components/sections/faqs";
 import { Steps } from "@/components/sections/steps";
@@ -9,7 +10,7 @@ export default function Page() {
   return (<>
     {/* Hero */}
     <div className="p-4">
-      <div className="relative flex flex-col justify-center w-full h-[80dvh] md:h-[calc(100dvh-32px)] px-[5%] overflow-hidden text-white rounded-xl">
+      <div className="relative flex flex-col justify-center w-full md:mt-0 h-[80dvh] md:h-[calc(100dvh-32px)] px-[5%] overflow-hidden text-white rounded-xl mt-20">
         <Image data-aos='zoom-in' className="object-cover -z-10 scale-x-[1] md:object-[0%_0%]" src="/pexels.jpg" fill alt="Background" />
         <div className="absolute -right-8 md:right-0 top-1/2 text-xs rotate-90">Scroll down to see more</div>
         <div data-aos='zoom-in' className="absolute inset-0 w-full h-full bg-black/50 -z-10"></div>
@@ -37,20 +38,21 @@ export default function Page() {
       <div className="relative flex flex-col w-full h-full lg:flex-row gap-x-12 gap-y-12">
         {/* 1st Sibling */}
         <div className="order-2 basis-full lg:basis-1/2 lg:order-1">
-          <div data-aos='fade' className="relative w-full overflow-hidden h-96 md:h-[calc(100dvh-90px)] rounded-2xl lg:rounded-4xl">
-            <Image className="object-cover scale-x-[-1] object-[0%_0%]" src="/pexels.jpg" fill alt="Background" />
+          <div data-aos='fade' className="relative w-full overflow-hidden h-75 md:h-150 rounded-2xl lg:rounded-4xl">
+            <Image className="object-cover scale-x-[-1] object-[0%_0%] saturate-90" src="/pexels.jpg" fill alt="Background" />
           </div>
         </div>
         {/* 2nd Sibling */}
-        <div className="flex flex-col order-1 lg:justify-center lg:basis-1/2 basis-full lg:order-2">
-          <div className="px-3 font-normal tracking-tighter py-0.5 border rounded-full border-black/20 w-max mb-6">About Us</div>
+        <div className="flex flex-col order-1 lg:basis-1/2 basis-full lg:order-2 relative">
+          <RoundedSubheading>About Us</RoundedSubheading>
           <div className="mb-8 heading">Empowering Global Workforce with <span className="gradient-text">Skilled Nepalese</span> Talent</div>
           <div data-aos-offset='-100' className="mb-3 text-base/7">
             Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
           </div>
-          <div data-aos='fade-down' data-aos-offset='-100' className="text-base/7">
+          <div data-aos='fade-down' data-aos-offset='-100' className="text-base/7 mb-5">
             Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
           </div>
+          <Link href="/about-us" className="btn">Learn More</Link>
         </div>
       </div>
     </div>
@@ -72,11 +74,15 @@ export default function Page() {
         <div className="hover:underline cursor-default">Marketing and digital jobs</div>
       </div>
     </div>
-    {/* Why Nepali */}
-    <div className="container w-[90%] py-20 mx-auto" >
+    {/* Why Nepal */}
+    <div className="container w-[90%] pt-20 mx-auto">
+      <div className="flex justify-center w-full">
+        <RoundedSubheading>Why Nepal</RoundedSubheading>
+      </div>
       <div className="mb-4 text-center heading">So, <span className="gradient-text">why</span> hire from Nepal?</div>
-      <div className="max-w-3xl mx-auto mb-10 text-center md:text-lg/7">Over the past one and a half decade, an increasing number of employers from different countries are showing their keen interest in hiring Professionals from Nepal.</div>
-      <div className="btn mb-20 mx-auto">Learn More</div>
+      <div className="max-w-3xl mx-auto mb-20 text-center md:text-lg/7">
+        Over the past one and a half decade, an increasing number of employers from different countries are showing their keen interest in hiring Professionals from Nepal.
+      </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         <div className="relative z-10 w-full p-4 overflow-hidden text-white h-60 md:h-80 rounded-3xl">
           <div className="absolute inset-0 -z-10 bg-black/50"></div>

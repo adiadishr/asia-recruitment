@@ -1,4 +1,4 @@
-import { LucideHome, Box, CircleUserRound, CircleHelp, Newspaper } from 'lucide-react'
+import { LucideHome, Box, CircleUserRound, CircleHelp, Newspaper, Lock } from 'lucide-react'
 
 export const navItems = [
   {
@@ -12,11 +12,6 @@ export const navItems = [
     icon: CircleUserRound
   },
   {
-    title: "Services",
-    href: "/services",
-    icon: Box
-  },
-  {
     title: "Blogs",
     href: "/blogs",
     icon: Newspaper,
@@ -26,5 +21,10 @@ export const navItems = [
     title: "FAQs",
     href: "/faq",
     icon: CircleHelp,
+  },
+  {
+    title: "Privacy Policy",
+    href: "/privacy-policy",
+    icon: Lock,
   },
 ];

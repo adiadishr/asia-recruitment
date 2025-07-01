@@ -77,7 +77,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 tracking-tight;
   }
 
   body {
@@ -85,7 +85,7 @@
   }
 
   .headline {
-    @apply font-normal tracking-tighter text-3xl md:text-5xl
+    @apply font-normal tracking-tighter text-5xl md:text-6xl
   }
 
   .heading {
@@ -101,7 +101,7 @@
   }
 
   .btn {
-    @apply flex gap-2 items-center text-xs px-4 py-2 w-max md:text-sm cursor-pointer tracking-tight text-white rounded-md bg-orange-500 border border-orange-500 hover:bg-orange-400 hover:border-orange-400 duration-300
+    @apply flex gap-2 items-center text-xs px-4 py-2 w-max md:text-sm cursor-pointer tracking-tight text-white rounded-md bg-orange-400 border border-orange-400 hover:bg-orange-300 hover:border-orange-300 duration-300
   }
 
   .gradient-text {

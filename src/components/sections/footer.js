@@ -1,6 +1,8 @@
+import { navItems } from "@/constants/nav";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 
 export default function Footer() {
     return (<>
@@ -10,8 +12,44 @@ export default function Footer() {
             <div className="py-20 z-10">
                 <div className="mb-8 tracking-tight text-center heading">Get matched today!</div>
                 <div className="flex items-center justify-center gap-4">
-                    <div className="btn">As an employee<ArrowRight size={16} /></div>
-                    <div className="btn !border-white !bg-transparent !text-white">As an employer<ArrowRight size={16} /></div>
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <div className="btn">As an employee<ArrowRight size={16} /></div>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[425px]">
+                            <DialogHeader>
+                                <DialogTitle>Edit profile</DialogTitle>
+                                <DialogDescription>
+                                    Make changes to your profile here. Click save when you&apos;re
+                                    done.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <DialogFooter>
+                                <DialogClose asChild>
+                                    <div className="btn">Close</div>
+                                </DialogClose>
+                            </DialogFooter>
+                        </DialogContent>
+                    </Dialog>
+                    <Dialog>
+                        <DialogTrigger asChild>
+                            <div className="btn !border-white !bg-transparent !text-white">As an employer<ArrowRight size={16} /></div>
+                        </DialogTrigger>
+                        <DialogContent className="sm:max-w-[425px]">
+                            <DialogHeader>
+                                <DialogTitle>Edit profile</DialogTitle>
+                                <DialogDescription>
+                                    Make changes to your profile here. Click save when you&apos;re
+                                    done.
+                                </DialogDescription>
+                            </DialogHeader>
+                            <DialogFooter>
+                                <DialogClose asChild>
+                                    <div className="btn">Close</div>
+                                </DialogClose>
+                            </DialogFooter>
+                        </DialogContent>
+                    </Dialog>
                 </div>
             </div>
             <div className="grid border-y border-orange-50/20 md:grid-cols-2 z-10">
@@ -30,11 +68,9 @@ export default function Footer() {
                     <div className="grid grid-cols-2 gap-8">
                         <div className="flex flex-col gap-4">
                             <div className="text-sm uppercase">Quick Links</div>
-                            <Link className="text-sm hover:underline text-white/80" href="/all-products">All Products</Link>
-                            <Link className="text-sm hover:underline text-white/80" href="/premium-diapers">Premium Diapers</Link>
-                            <Link className="text-sm hover:underline text-white/80" href="/training-pants">Premium Training Pants</Link>
-                            <Link className="text-sm hover:underline text-white/80" href="/sensitive-wipes">Premium Sensitive Wipes</Link>
-                            <Link className="text-sm hover:underline text-white/80" href="/water-wipes">99% Water Premium Wipes</Link>
+                            {navItems.map((navItem) => (
+                                <Link key={navItem.title} className="text-sm hover:underline text-white/80" href={navItem.href}>{navItem.title}</Link>
+                            ))}
                         </div>
                         <div className="flex flex-col gap-4">
                             <div className="text-sm uppercase text-right md:text-start">Social</div>
