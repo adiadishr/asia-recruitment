@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Menu, PhoneCall } from 'lucide-react'
+import { Mail, MapPin, Menu, Phone, PhoneCall } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -36,24 +36,27 @@ export default function Navbar() {
         <div
             className={cn(
                 "fixed z-50 w-full duration-300",
-                pathname === "/"
-                    ? scrolled ? '!bg-white/95 backdrop-blur text-black top-0 px-[5%]' : 'md:bg-transparent md:text-white md:top-6 md:px-[2.5%] top-0 bg-white text-black px-[5%]'
-                    : scrolled ? '!bg-white/95 backdrop-blur text-black top-0 px-[5%]' : 'md:bg-transparent md:text-white md:top-2 md:px-[2.5%] top-0 bg-white text-black px-[5%]'
+                pathname === "/" ?
+                    scrolled ? '!bg-white backdrop-blur text-black top-0 px-[5%]' : 'md:bg-transparent md:text-white md:top-6 md:px-[2.5%] top-0 bg-white text-black px-[5%]'
+                    :
+                    scrolled ? '!bg-white backdrop-blur text-black top-0 px-[5%]' : 'md:bg-transparent md:text-white md:top-2 md:px-[2.5%] top-0 bg-white text-black px-[5%]',
             )}
         >
             <div className={cn("h-[72px] flex justify-between items-center duration-300", !scrolled && "border-white/20 border-b px-[2.5%]")}>
                 {/* Logo */}
-                <div className="relative z-[100] size-20">
-                    <Image
-                        fill
-                        alt="logo"
-                        className={cn(
-                            "object-contain duration-500 ease-quart",
-                            scrolled ? "" : "md:saturate-0 md:brightness-200"
-                        )}
-                        src="/logo-top.png"
-                    />
-                </div>
+                <Link href="/">
+                    <div className="relative z-[100] size-20">
+                        <Image
+                            fill
+                            alt="logo"
+                            className={cn(
+                                "object-contain duration-500 ease-quart",
+                                scrolled ? "" : "md:saturate-0 md:brightness-200"
+                            )}
+                            src="/logo-top.png"
+                        />
+                    </div>
+                </Link>
                 {/* Links */}
                 <div className="flex items-center gap-8 justify-right">
                     <div className="items-center hidden gap-8 md:flex">
@@ -72,7 +75,7 @@ export default function Navbar() {
                     <Dialog>
                         <DialogTrigger asChild>
                             <div className={cn(
-                                "flex items-center gap-2 px-4 py-1.5 duration-300 border rounded-md cursor-pointer",
+                                "md:flex items-center gap-2 px-4 py-1.5 duration-300 border rounded-md cursor-pointer hidden",
                                 scrolled
                                     ? "bg-orange-400 text-white border-orange-400 hover:bg-orange-400/50 hover:border-orange-400/50"
                                     : "md:border-white md:hover:bg-white md:text-white md:bg-transparent md:hover:text-black bg-orange-400 text-white border-orange-400 hover:bg-orange-400/50 hover:border-orange-400/50"
@@ -83,14 +86,27 @@ export default function Navbar() {
                         </DialogTrigger>
                         <DialogContent className="sm:max-w-[425px]">
                             <DialogHeader>
-                                <DialogTitle>Edit profile</DialogTitle>
-                                <DialogDescription>
-                                    Make changes to your profile here. Click save when you&apos;re
-                                    done.
+                                <DialogTitle className="text-start">Contact Us</DialogTitle>
+                                <DialogDescription className="text-start">
+                                    You can find our contact details below. If you have any questions or concerns, please feel free to contact us.
                                 </DialogDescription>
                             </DialogHeader>
-                            <DialogFooter>
-                                <DialogClose asChild>
+                            <div className="flex flex-col gap-2.5 text-neutral-700 text-sm mt-2.5">
+                                <div className="flex items-center gap-5 cursor-pointer hover:underline">
+                                    <Phone fill='currentColor' size={16} />
+                                    +977 9851039107
+                                </div>
+                                <div className="flex items-center gap-5 cursor-pointer hover:underline">
+                                    <MapPin size={16} />
+                                    Ratopul, Kathmandu
+                                </div>
+                                <div className="flex items-center gap-5 cursor-pointer hover:underline">
+                                    <Mail size={16} />
+                                    +977 9851039107
+                                </div>
+                            </div>
+                            <DialogFooter className="mt-2.5">
+                                <DialogClose className="justify-self-end" asChild>
                                     <div className="btn">Close</div>
                                 </DialogClose>
                             </DialogFooter>
@@ -126,6 +142,6 @@ export default function Navbar() {
 
                 </div>
             </div>
-        </div>
+        </div >
     )
 }

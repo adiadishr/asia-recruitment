@@ -1,7 +1,5 @@
-import RoundedSubheading from "@/components/atomic/rounded-subheading";
+import RoundedSubheading from "@/components/reusable/rounded-subheading";
 import { TextReveal } from "@/components/magicui/text-reveal";
-import FAQ from "@/components/sections/faqs";
-import { Steps } from "@/components/sections/steps";
 import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +10,7 @@ export default function Page() {
     <div className="p-4">
       <div className="relative flex flex-col justify-center w-full md:mt-0 h-[80dvh] md:h-[calc(100dvh-32px)] px-[5%] overflow-hidden text-white rounded-xl mt-20">
         <Image data-aos='zoom-in' className="object-cover -z-10 scale-x-[1] md:object-[0%_0%]" src="/pexels.jpg" fill alt="Background" />
-        <div className="absolute -right-8 md:right-0 top-1/2 text-xs rotate-90">Scroll down to see more</div>
+        <div className="absolute text-xs rotate-90 -right-8 md:right-0 top-1/2">Scroll down to see more</div>
         <div data-aos='zoom-in' className="absolute inset-0 w-full h-full bg-black/50 -z-10"></div>
         <div data-aos='fade-down' data-aos-delay='150' className="relative mx-auto mb-8 size-24">
           <Image
@@ -22,12 +20,12 @@ export default function Page() {
             src="/logo.png"
           />
         </div>
-        <div data-aos='fade-down' data-aos-delay='250' className="text-center headline">
+        <div data-aos='fade-down' data-aos-delay='250' className="tracking-tighter text-center headline">
           Matching Talent,<br />With Opportunity
         </div>
         <div className="absolute bottom-0 flex items-center justify-between w-[90%] py-8">
           <div>A Forbes Best Recruitment Company <br /> & Trusted Partner <span className="font-bold ">In Your Success</span></div>
-          <div className="relative flex items-center justify-center p-3 md:p-4 overflow-hidden text-black bg-white rounded-full hover:animate-spin">
+          <div className="relative flex items-center justify-center p-3 overflow-hidden text-black bg-white rounded-full md:p-4 hover:animate-spin">
             <ArrowDown size={16} />
           </div>
         </div>
@@ -43,13 +41,13 @@ export default function Page() {
           </div>
         </div>
         {/* 2nd Sibling */}
-        <div className="flex flex-col order-1 lg:basis-1/2 basis-full lg:order-2 relative">
+        <div className="relative flex flex-col order-1 lg:basis-1/2 basis-full lg:order-2">
           <RoundedSubheading>About Us</RoundedSubheading>
           <div className="mb-8 heading">Empowering Global Workforce with <span className="gradient-text">Skilled Nepalese</span> Talent</div>
           <div data-aos-offset='-100' className="mb-3 text-base/7">
             Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
           </div>
-          <div data-aos='fade-down' data-aos-offset='-100' className="text-base/7 mb-5">
+          <div data-aos='fade-down' data-aos-offset='-100' className="mb-5 text-base/7">
             Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
           </div>
           <Link href="/about-us" className="btn">Learn More</Link>
@@ -63,15 +61,15 @@ export default function Page() {
         What jobs do we provide?
       </div>
       <div className="mx-auto w-[90%] md:w-[85%] text-white grid grid-cols-2 lg:grid-cols-3 gap-8 tracking-tight">
-        <div className="hover:underline cursor-default">Accounting and finance jobs</div>
-        <div className="hover:underline cursor-default">Construction jobs</div>
-        <div className="hover:underline cursor-default">Tech / IT jobs</div>
-        <div className="hover:underline cursor-default">Sustainability jobs</div>
-        <div className="hover:underline cursor-default">Property and facilities management jobs</div>
-        <div className="hover:underline cursor-default">Engineering jobs</div>
-        <div className="hover:underline cursor-default">Human resources jobs</div>
-        <div className="hover:underline cursor-default">Life sciences jobs</div>
-        <div className="hover:underline cursor-default">Marketing and digital jobs</div>
+        <div className="cursor-default hover:underline">Accounting and finance jobs</div>
+        <div className="cursor-default hover:underline">Construction jobs</div>
+        <div className="cursor-default hover:underline">Tech / IT jobs</div>
+        <div className="cursor-default hover:underline">Sustainability jobs</div>
+        <div className="cursor-default hover:underline">Property and facilities management jobs</div>
+        <div className="cursor-default hover:underline">Engineering jobs</div>
+        <div className="cursor-default hover:underline">Human resources jobs</div>
+        <div className="cursor-default hover:underline">Life sciences jobs</div>
+        <div className="cursor-default hover:underline">Marketing and digital jobs</div>
       </div>
     </div>
     {/* Why Nepal */}

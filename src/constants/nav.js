@@ -12,6 +12,11 @@ export const navItems = [
     icon: CircleUserRound
   },
   {
+    title: "Process",
+    href: "/process",
+    icon: Box,
+  },
+  {
     title: "Blogs",
     href: "/blogs",
     icon: Newspaper,
@@ -21,10 +26,5 @@ export const navItems = [
     title: "FAQs",
     href: "/faq",
     icon: CircleHelp,
-  },
-  {
-    title: "Privacy Policy",
-    href: "/privacy-policy",
-    icon: Lock,
   },
 ];

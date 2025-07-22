@@ -77,38 +77,42 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 tracking-tight;
+    @apply tracking-tight border-border outline-ring/50;
   }
 
   body {
-    @apply bg-white text-neutral-900 font-sans tracking-tight;
+    @apply font-sans tracking-tight bg-white text-neutral-900;
   }
 
   .headline {
-    @apply font-normal tracking-tighter text-5xl md:text-6xl
+    @apply text-5xl tracking-tight md:text-6xl/12;
   }
 
   .heading {
-    @apply tracking-tighter text-3xl/snug md:text-4xl/11.5 lg:text-5xl/14
+    @apply tracking-tight text-3xl/snug md:text-4xl/11.5 lg:text-5xl/14;
   }
 
   .subheading {
-    @apply text-xl lg:text-3xl
+    @apply text-xl lg:text-3xl;
   }
 
   .paragraph {
-    @apply text-base/6 md:text-lg/7
+    @apply text-base/6 md:text-lg/7;
   }
 
   .btn {
-    @apply flex gap-2 items-center text-xs px-4 py-2 w-max md:text-sm cursor-pointer tracking-tight text-white rounded-md bg-orange-400 border border-orange-400 hover:bg-orange-300 hover:border-orange-300 duration-300
+    @apply flex items-center gap-2 px-4 py-2 text-xs tracking-tight text-white duration-300 bg-orange-400 border border-orange-400 rounded-md cursor-pointer w-max md:text-sm hover:bg-orange-300 hover:border-orange-300;
   }
 
   .gradient-text {
-    @apply text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-yellow-400
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-orange-400 to-yellow-400;
   }
 
   .gradient-bg {
-    @apply bg-gradient-to-b from-orange-400 to-yellow-400
+    @apply bg-gradient-to-b from-orange-400 to-yellow-400;
+  }
+
+  .color-picker {
+    color: #ff8903;
   }
 }
