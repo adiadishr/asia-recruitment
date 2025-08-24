@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { Mail, MapPin, Menu, Phone, PhoneCall } from 'lucide-react'
+import { Globe, Info, MapPin, Menu, PhoneCall } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -93,16 +93,16 @@ export default function Navbar() {
                             </DialogHeader>
                             <div className="flex flex-col gap-2.5 text-neutral-700 text-sm mt-2.5">
                                 <div className="flex items-center gap-5 cursor-pointer hover:underline">
-                                    <Phone fill='currentColor' size={16} />
-                                    +977 9851039107
+                                    <Info size={16} />
+                                    Nepal License Number - 1557/079/08
                                 </div>
                                 <div className="flex items-center gap-5 cursor-pointer hover:underline">
                                     <MapPin size={16} />
-                                    Ratopul, Kathmandu
+                                    Old-Baneshwor-09, Kathmandu
                                 </div>
                                 <div className="flex items-center gap-5 cursor-pointer hover:underline">
-                                    <Mail size={16} />
-                                    +977 9851039107
+                                    <Globe size={16} />
+                                    asiarecruitmentnepal.com
                                 </div>
                             </div>
                             <DialogFooter className="mt-2.5">

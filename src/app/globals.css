@@ -83,7 +83,9 @@
   body {
     @apply font-sans tracking-tight bg-white text-neutral-900;
   }
+}
 
+@layer components {
   .headline {
     @apply text-5xl tracking-tight md:text-6xl/12;
   }

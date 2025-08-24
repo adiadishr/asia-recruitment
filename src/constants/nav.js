@@ -16,12 +16,12 @@ export const navItems = [
     href: "/process",
     icon: Box,
   },
-  {
-    title: "Blogs",
-    href: "/blogs",
-    icon: Newspaper,
-    transparent: true
-  },
+  // {
+  //   title: "Blogs",
+  //   href: "/blogs",
+  //   icon: Newspaper,
+  //   transparent: true
+  // },
   {
     title: "FAQs",
     href: "/faq",

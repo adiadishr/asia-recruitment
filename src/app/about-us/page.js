@@ -16,17 +16,23 @@ export default function Page() {
       <div className="absolute translate-x-1/2 rounded-full shadow-2xl opacity-25 -translate-y-2/7 top-1/2 right-1/2 size-200 gradient-bg -z-10 shadow-orange-400 blur-3xl" />
       <RoundedSubheading className="mx-auto mb-5">Managing Team</RoundedSubheading>
       <div className="mb-20 text-center heading gradient-text">Our Leadership</div>
+      {/* CEO */}
       <div className="flex flex-col w-full gap-20 mb-20 md:flex-row">
+        {/* Image */}
         <div className="w-max">
           <div className="relative overflow-hidden rounded-full size-80">
             <Image fill src="/person.jpg" alt="Man" className="object-cover object-[50%_100%]" />
           </div>
         </div>
+        {/* Message */}
         <div className="flex flex-col justify-between">
           <div>
             <div className="mb-8 text-xl md:text-3xl">Message from the CEO</div>
+            <p className="mb-2.5">
+              Our workers are reputed for their obedience, dutiful and loyal nature to their employers. We have been supplying different categories of manpower unskilled labor, semi-skilled trade persons, qualified engineers to many gulf countries like Saudi Arabia, Qatar, U.A.E and others.
+            </p>
             <p>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We are even ready to provide the workers to any country who can provide us approved work-permit visas allowed by Nepal Government.
             </p>
           </div>
           <div>
@@ -35,12 +41,17 @@ export default function Page() {
           </div>
         </div>
       </div>
+      {/* Director */}
       <div className="flex flex-col w-full gap-20 md:flex-row">
+        {/* Message */}
         <div className="flex flex-col justify-between">
           <div>
             <div className="mb-8 text-xl md:text-3xl">Message from the CEO</div>
+            <p className="mb-2.5">
+              Asia Recruitment aims to accomplish human resource goals by building and promoting a high-end professional working environment with the highest level of Human Resource services and employee satisfaction.
+            </p>
             <p>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Nepalese professionals are the most pursued in every sector globally, for their intellectual, technical, physical and adaptive abilities.
             </p>
           </div>
           <div>
@@ -48,6 +59,7 @@ export default function Page() {
             <div className="text-base text-left md:text-lg text-neutral-700">Chie Executive Officer</div>
           </div>
         </div>
+        {/* Image */}
         <div className="w-max">
           <div className="relative overflow-hidden rounded-full size-80">
             <Image fill src="/person.jpg" alt="Man" className="object-cover object-[50%_100%]" />
@@ -67,13 +79,14 @@ export default function Page() {
           <div className="flex flex-col gap-5">
             <div className="subheading gradient-text">Mission</div>
             <div className="paragraph">
-              To connect hardworking, skilled and unskilled Nepali talent with reputable employers across the globe — providing reliable, ethical, and seamless recruitment services that benefit both workers and businesses.
+              Our mission is to explore the local and international job opportunities for Nepalese aspiring career and employment in abroad and local market.
             </div>
           </div>
           <div className="flex flex-col gap-5">
             <div className="subheading gradient-text">Vision</div>
             <div className="paragraph">
-              To be the leading bridge between Nepal and the international workforce, setting the standard for trust, quality, and integrity in global manpower recruitment.
+              Create and promote international standard manpower solution for both employee and employer
+              and find the global opportunities for them as per their need.
             </div>
           </div>
         </div>

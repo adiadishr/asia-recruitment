@@ -45,10 +45,10 @@ export default function Page() {
           <RoundedSubheading>About Us</RoundedSubheading>
           <div className="mb-8 heading">Empowering Global Workforce with <span className="gradient-text">Skilled Nepalese</span> Talent</div>
           <div data-aos-offset='-100' className="mb-3 text-base/7">
-            Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
+            Asia Recruitment Nepal is an independent human resource consultancy that provides Nepalese human resources to companies abroad. They supply, semi-skilled, technical, and professional manpower to meet the specific demands of their clients.
           </div>
           <div data-aos='fade-down' data-aos-offset='-100' className="mb-5 text-base/7">
-            Asia Recruitment Nepal is a truly independant human resource consultancy which supplies Nepalese skilled, semiskilled, technical and professional human resources abroad.
+            The company&apos;s primary goal is to help qualified and deserving individuals from Nepal findemployment opportunities overseas, enabling them to pursue their careers on a global scale.
           </div>
           <Link href="/about-us" className="btn">Learn More</Link>
         </div>
@@ -61,15 +61,15 @@ export default function Page() {
         What jobs do we provide?
       </div>
       <div className="mx-auto w-[90%] md:w-[85%] text-white grid grid-cols-2 lg:grid-cols-3 gap-8 tracking-tight">
-        <div className="cursor-default hover:underline">Accounting and finance jobs</div>
-        <div className="cursor-default hover:underline">Construction jobs</div>
-        <div className="cursor-default hover:underline">Tech / IT jobs</div>
-        <div className="cursor-default hover:underline">Sustainability jobs</div>
-        <div className="cursor-default hover:underline">Property and facilities management jobs</div>
-        <div className="cursor-default hover:underline">Engineering jobs</div>
-        <div className="cursor-default hover:underline">Human resources jobs</div>
-        <div className="cursor-default hover:underline">Life sciences jobs</div>
-        <div className="cursor-default hover:underline">Marketing and digital jobs</div>
+        <div className="cursor-default hover:underline">Medical Personnel</div>
+        <div className="cursor-default hover:underline">Administrative Special</div>
+        <div className="cursor-default hover:underline">Caregivers</div>
+        <div className="cursor-default hover:underline">Security Guard</div>
+        <div className="cursor-default hover:underline">Electrical Work</div>
+        <div className="cursor-default hover:underline">Piping Work</div>
+        <div className="cursor-default hover:underline">Masonry Work</div>
+        <div className="cursor-default hover:underline">Supermarket Workers</div>
+        <div className="cursor-default hover:underline">Computer Operators</div>
       </div>
     </div>
     {/* Why Nepal */}
@@ -110,10 +110,10 @@ export default function Page() {
     </div>
     {/* Marketing Text */}
     <TextReveal>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta harum recusandae enim vitae sunt aspernatur esse qui nemo! Corrupti vitae at laboriosam maxime quasi delectus molestiae voluptatem dignissimos! Rerum.
+      As a premier consultancy, we place qualified Nepalese professionals, technicians, and skilled workers into global careers, fulfilling our clients&apos; for capable and dedicated human resources worldwide.
     </TextReveal>
     {/* Blogs */}
-    <div className="pb-20 w-[90%] mx-auto">
+    {/* <div className="pb-20 w-[90%] mx-auto">
       <div className="mb-8 text-3xl tracking-tight">Featured Articles</div>
       <div className="grid gap-8 md:grid-cols-2">
         {Array.from({ length: 2 }).map((_, i) => (
@@ -127,7 +127,7 @@ export default function Page() {
           </Link>
         ))}
       </div>
-    </div>
+    </div> */}
     {/* Steps */}
     {/* <div className="w-[90%] container mx-auto pb-20">
       <Steps />
